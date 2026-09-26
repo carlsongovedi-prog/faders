@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Contact — PULSE</title>
+  <meta name="description" content="Get in touch with PULSE about bookings, tickets, or partnering on your next event." />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; script-src 'self';">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">PUL<span>SE</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Let's talk</h2>
+            <p>Booking a show, chasing a ticket, or pitching a venue — this reaches the right people.</p>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <form
+            id="contact-form"
+            novalidate
+            action="https://formsubmit.co/carlsongovedi@gmail.com"
+            method="POST"
+          >
+            <!-- FormSubmit config fields — see README for how this works -->
+            <input type="hidden" name="_subject" value="New message from PULSE contact form" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            <div class="field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required />
+              <p class="error" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+              <p class="error" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+              <p class="error" role="alert"></p>
+            </div>
+
+            <!-- Honeypot field: hidden from real visitors, catches simple bots.
+                 Left blank by humans; if a bot fills it, the submit handler drops the message. -->
+            <div style="position:absolute; left:-9999px;" aria-hidden="true">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <p class="form-status" role="status"></p>
+          </form>
+
+          <div>
+            <div class="info-card">
+              <h3>PULSE Events</h3>
+              <div class="row">📍 Plot 14, Kira Road, Kampala, Uganda</div>
+              <div class="row">✉️ hello@pulse-events.example</div>
+              <div class="row">📞 +256 700 000 000</div>
+              <div class="row">🕒 Mon–Fri, 9am–6pm EAT</div>
+              <div class="socials">
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="X / Twitter">X</a>
+                <a href="#" aria-label="TikTok">TT</a>
+              </div>
+            </div>
+            <div class="info-card">
+              <h3>For artists &amp; venues</h3>
+              <p style="max-width:none; color:var(--muted);">
+                Send a short pitch with your act or space, expected capacity, and
+                dates you're holding — we reply within two business days.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© 2026 PULSE Events, Kampala.</span>
+      <span>Built for phones, tablets &amp; desktops.</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
