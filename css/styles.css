@@ -173,8 +173,8 @@ p.lead{ color: var(--muted); font-size:1.05rem; max-width:56ch; }
   text-align:left;
   display:flex;
   flex-direction:column;
-  align-items:center;
-  padding-left: 4px;
+  align-items:left;
+  padding-left: 0px;
 }
 .hero-badge{
   display:flex;
@@ -194,8 +194,8 @@ p.lead{ color: var(--muted); font-size:1.05rem; max-width:56ch; }
   letter-spacing: 0.06em;
   color: var(--paper);
 }
-.hero h1{ max-width: 16ch; text-transform: uppercase; }
-.hero .lead{ margin-top: 18px; max-width: 46ch; }
+.hero h1{ max-width: 17ch; text-transform: uppercase; }
+.hero .lead{ margin-top: 14px; max-width: 46ch; }
 
 .btn{
   display:inline-flex; align-items:center; gap:8px;
