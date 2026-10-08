@@ -209,7 +209,7 @@ p.lead{ color: var(--muted); font-size:1.05rem; max-width:56ch; }
 .hero .container{
   max-width: none;
   margin-left: 0;
-  padding-left: 0px;
+  padding-left: 20px;
 }
 
 /* Right-side logo slot — empty (and invisible) until you add your own
