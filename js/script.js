@@ -53,11 +53,17 @@
     });
   }
 
-  /* ---------- Gallery: lightbox ---------- */
+  /* ---------- Gallery + selected-work: lightbox ----------
+     Shared between the "Selected work" case-study photos and the
+     filterable "More moments" grid below, so every photo on the page
+     opens the same way: click to enlarge, arrow keys / buttons to
+     step through, Escape or background click to close. */
   function initLightbox() {
-    var grid = document.querySelector(".gallery-grid");
     var lightbox = document.querySelector(".lightbox");
-    if (!grid || !lightbox) return;
+    var allItems = Array.prototype.slice.call(
+      document.querySelectorAll(".gallery-item, .work-item")
+    );
+    if (!allItems.length || !lightbox) return;
 
     var lbImg = lightbox.querySelector("img");
     var lbCap = lightbox.querySelector(".lightbox-cap");
@@ -69,11 +75,9 @@
     var currentIndex = 0;
 
     function collectVisible() {
-      visibleItems = Array.prototype.slice
-        .call(grid.querySelectorAll(".gallery-item"))
-        .filter(function (item) {
-          return item.style.display !== "none";
-        });
+      visibleItems = allItems.filter(function (item) {
+        return item.style.display !== "none";
+      });
     }
 
     function show(index) {
@@ -94,8 +98,8 @@
       lbImg.src = "";
     }
 
-    grid.addEventListener("click", function (e) {
-      var item = e.target.closest(".gallery-item");
+    document.addEventListener("click", function (e) {
+      var item = e.target.closest(".gallery-item, .work-item");
       if (!item) return;
       collectVisible();
       var idx = visibleItems.indexOf(item);
